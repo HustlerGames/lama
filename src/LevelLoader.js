@@ -56,6 +56,22 @@ class LevelLoader
         unit.position.y = 10;
         level.units.push(unit);
 
+        unit = new Unit()
+        unit.position.x = 15;
+        unit.position.y = 45;
+        level.units.push(unit);
+
+
+        unit = new Unit()
+        unit.position.x = 20;
+        unit.position.y = 13;
+        level.units.push(unit);
+
+        unit = new Unit()
+        unit.position.x = 40;
+        unit.position.y = 20;
+        level.units.push(unit);
+
         this.callback(level);
     }
 
