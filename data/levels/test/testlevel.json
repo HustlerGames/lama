@@ -3,8 +3,8 @@
     "tileWidth": 32,
     "tileHeight": 16,
     "textures": [
-        "/data/tileset/grass3.png",
-        "/data/tileset/soldiers2.png"
+        "data/tileset/grass3.png",
+        "data/tileset/soldiers2.png"
     ],
     "animations": {
         "soldier-walk": {
@@ -23,7 +23,7 @@
             ],
             "tileset": {
                 "name": "soldiers",
-                "url": "/data/tileset/soldiers2.png",
+                "url": "data/tileset/soldiers2.png",
                 "offset": 1,
                 "border": 2,
                 "cols": 10,
@@ -96,7 +96,7 @@
         ],
         "tileset": {
             "name": "grass-1",
-            "url": "/data/tileset/grass3.png",
+            "url": "data/tileset/grass3.png",
             "offset": 1,
             "border": 1,
             "cols": 3,
