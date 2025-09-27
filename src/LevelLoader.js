@@ -54,17 +54,20 @@ class LevelLoader
         let unit = new Unit()
         unit.position.x = 10;
         unit.position.y = 10;
+        unit.animation.counter = 2;
         level.units.push(unit);
 
         unit = new Unit()
         unit.position.x = 15;
         unit.position.y = 45;
+        unit.animation.counter = 3;
         level.units.push(unit);
 
 
         unit = new Unit()
         unit.position.x = 20;
         unit.position.y = 13;
+        unit.animation.counter = 1;
         level.units.push(unit);
 
         unit = new Unit()
