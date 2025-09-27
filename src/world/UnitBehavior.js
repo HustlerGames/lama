@@ -5,9 +5,12 @@ class UnitBehavior extends Behavior
     unit
     context
 
+    target
 
     constructor() {
         super()
+        this.target = {x:0,y:0}
+
     }
 
 
@@ -15,24 +18,23 @@ class UnitBehavior extends Behavior
     update() {
         super.update ();
 
-        let target = {x:0,y:0}
 
         if(this.unit.position.x < 3 && this.unit.position.y < 3)
         {
-            target = {x:49,y:1}
+            this.target = {x:49,y:1}
         }
 
         if(this.unit.position.x > 48 && this.unit.position.y < 2)
         {
-            target = {x:49,y:49}
+            this.target = {x:49,y:49}
         }
 
         if(this.unit.position.x > 48 && this.unit.position.y > 48)
         {
-            target = {x:0,y:0}
+            this.target = {x:0,y:0}
         }
 
-        this.moveTo(target.x, target.y)
+        this.moveTo(this.target.x, this.target.y)
     }
 
     moveTo(x, y) {
