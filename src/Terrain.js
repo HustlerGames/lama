@@ -1,5 +1,5 @@
 import { Layer } from "./Layer.js"
-import { Tileset } from "./TileSet.js"
+import { Tileset } from "./Tileset.js"
 
 class Terrain
 {
