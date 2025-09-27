@@ -61,7 +61,7 @@ class Application {
         this.setupControls()
 
         this.levelLoader = new LevelLoader(this.resourceManager)
-        this.levelLoader.load('/data/levels/test/testlevel.json')
+        this.levelLoader.load('data/levels/test/testlevel.json')
         this.levelLoader.onLoad((level) => {
             this.onLevelLoaded(level)
         })
