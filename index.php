@@ -1,0 +1,30 @@
+<?php
+/**
+ *
+ */
+
+?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="module">
+    import { Application }  from '/src/Application.js'
+
+    let config = {
+        view: {
+            width: 1600,
+            height: 800,
+        },
+        fps: 60
+    };
+
+
+    var app = new Application();
+    app.run(config);
+
+</script>
+</body>
+</html>

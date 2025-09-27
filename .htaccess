@@ -1,0 +1,46 @@
+# Включить keep-alive соединения
+Header always set Connection "keep-alive"
+
+# Настройки кэширования для статических ресурсов
+<IfModule mod_expires.c>
+    ExpiresActive on
+    
+    # JavaScript файлы - кэш на 1 час
+    ExpiresByType application/javascript "access plus 1 hour"
+    ExpiresByType text/javascript "access plus 1 hour"
+    
+    # CSS файлы - кэш на 1 час
+    ExpiresByType text/css "access plus 1 hour"
+    
+    # Изображения - кэш на 1 день
+    ExpiresByType image/png "access plus 1 day"
+    ExpiresByType image/jpg "access plus 1 day"
+    ExpiresByType image/jpeg "access plus 1 day"
+    ExpiresByType image/gif "access plus 1 day"
+    ExpiresByType image/webp "access plus 1 day"
+    
+    # JSON файлы - кэш на 30 минут
+    ExpiresByType application/json "access plus 30 minutes"
+</IfModule>
+
+# Сжатие для уменьшения размера передаваемых данных
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+</IfModule>
+
+# Настройки keep-alive
+KeepAlive On
+KeepAliveTimeout 15
+MaxKeepAliveRequests 100
+
+
+
