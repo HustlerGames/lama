@@ -18,6 +18,7 @@ class UnitRenderer
             let animation = level.animations[name]
             let totalFrames = animation.frames
             let tickCount = unit.animation.counter
+            tickCount = Math.ceil(tickCount * animation.speed)
             let frameIndex = tickCount % totalFrames
             let sprite = animation.getSprite(frameIndex, unit.direction)
             let spritePosition = Isometria.worldToScreenPoint(

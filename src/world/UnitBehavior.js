@@ -2,6 +2,16 @@ import {Behavior} from "./Behavior.js";
 
 class UnitBehavior extends Behavior
 {
+    static DIRECTION_UP = 0
+    static DIRECTION_UP_RIGHT = 1
+    static DIRECTION_RIGHT = 2
+    static DIRECTION_DOWN_RIGHT = 3
+    static DIRECTION_DOWN = 4
+    static DIRECTION_DOWN_LEFT = 5
+    static DIRECTION_LEFT = 6
+    static DIRECTION_UP_LEFT = 7
+
+
     unit
     context
 
@@ -18,19 +28,21 @@ class UnitBehavior extends Behavior
     update() {
         super.update ();
 
-
         if(this.unit.position.x < 3 && this.unit.position.y < 3)
         {
+            this.unit.direction = UnitBehavior.DIRECTION_DOWN_RIGHT
             this.target = {x:49,y:1}
         }
 
         if(this.unit.position.x > 48 && this.unit.position.y < 2)
         {
+            this.unit.direction = UnitBehavior.DIRECTION_DOWN_LEFT
             this.target = {x:49,y:49}
         }
 
         if(this.unit.position.x > 48 && this.unit.position.y > 48)
         {
+            this.unit.direction = UnitBehavior.DIRECTION_UP
             this.target = {x:0,y:0}
         }
 

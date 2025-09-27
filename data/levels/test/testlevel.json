@@ -8,16 +8,16 @@
     ],
     "animations": {
         "soldier-walk": {
-            "speed": 1,
+            "speed": 0.1,
             "loop": 1,
             "frames": 4,
             "layers":[
                 { "sequence": [0,1,2,3] },
                 { "sequence": [0,1,2,3] },
                 { "sequence": [0,1,2,3] },
+                { "sequence": [60,61,62,63] },
                 { "sequence": [0,1,2,3] },
-                { "sequence": [0,1,2,3] },
-                { "sequence": [0,1,2,3] },
+                { "sequence": [70,71,72,73] },
                 { "sequence": [0,1,2,3] },
                 { "sequence": [0,1,2,3] }
             ],
